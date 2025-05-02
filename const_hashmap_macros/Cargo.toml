@@ -2,6 +2,8 @@
 name = "const_hashmap_macros"
 version = "0.1.0"
 edition = "2024"
+authors = ["Alan Volker <volkeralan12@gmail.com>"]
+license = "MIT OR Apache-2.0"
 description = "A macro to create a map with constant keys and values"
 
 [lib]
@@ -18,4 +20,4 @@ syn = { version = "2.0.101", features = ["full", "extra-traits"] }
 
 
 [dev-dependencies]
-const_hashmap = { version = "0.1.0", path = "../../const_hashmap" }
+const_hashmap = { version = "0.1.0" }

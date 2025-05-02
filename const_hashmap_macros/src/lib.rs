@@ -32,22 +32,6 @@ use proc_macro::TokenStream;
 ///      ])
 ///  };
 /// ```
-///
-/// Which is equivalent to:
-/// ```rust
-/// #![feature(const_trait_impl)]
-/// use const_hashmap::ConstMap;
-/// use const_hashmap::Bucket::{Empty, Filled};
-/// use std::marker::PhantomData;
-/// const COLORS: const_hashmap::ConstMap<&str, u8, 8> = ConstMap {
-///     buckets: [Empty, Empty, Empty, Empty,
-///                 Filled { key: "red", val: 0 },
-///                 Filled { key: "green", val: 1 },
-///                 Filled { key: "blue", val: 2 },
-///                 Empty],
-///     _phantom: PhantomData
-/// };
-/// ```
 #[proc_macro]
 pub fn const_hashmap(input: TokenStream) -> TokenStream {
     const_hashmap_impl::const_hashmap_impl(input)

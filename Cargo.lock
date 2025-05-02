@@ -7,10 +7,16 @@ name = "const_hashmap"
 version = "0.1.0"
 
 [[package]]
+name = "const_hashmap"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9fca7f9ec297b0928ad3d3660bab001d5bc40313e4562a3425183372e2a57af8"
+
+[[package]]
 name = "const_hashmap_macros"
 version = "0.1.0"
 dependencies = [
- "const_hashmap",
+ "const_hashmap 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro2",
  "quote",
  "syn",
