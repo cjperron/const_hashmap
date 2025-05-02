@@ -1,5 +1,5 @@
 #![feature(const_trait_impl)] // impl de rasgos en const
-//! Capa pública del crate `const_hashmap`.
+//! Macros for `const_hashmap` crate
 
 mod const_hashmap_impl;
 mod derive;
