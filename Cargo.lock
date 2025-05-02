@@ -5,6 +5,9 @@ version = 4
 [[package]]
 name = "const_hashmap"
 version = "0.1.0"
+dependencies = [
+ "const_hashmap_macros 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "const_hashmap"
@@ -17,6 +20,17 @@ name = "const_hashmap_macros"
 version = "0.1.0"
 dependencies = [
  "const_hashmap 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "const_hashmap_macros"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd2728e1b2155d20e1871639c94409799ceed509185f423a38e872df47c59302"
+dependencies = [
  "proc-macro2",
  "quote",
  "syn",

@@ -14,11 +14,12 @@ rust-version = "1.86.0"
 members = ["const_hashmap_macros"]
 resolver = "3"
 
-# [dependencies]
-# const_hashmap_macros = { version = "0.1.0", path = "./const_hashmap_macros" }
+[dependencies]
+const_hashmap_macros = { version = "0.1.0" }
 
-# [features]
-# derive = ["const_hashmap_macros/derive"]
+[features]
+default = []
+derive = ["const_hashmap_macros/derive"]
 
 [badges]
 maintenance = { status = "experimental" }

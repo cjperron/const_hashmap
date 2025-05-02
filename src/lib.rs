@@ -58,5 +58,10 @@ mod core;
 //pub use const_hashmap_macros::const_hashmap;
 pub use core::{Bucket, ConstEq, ConstHash, ConstMap, build_map};
 
-//#[cfg(feature = "derive")]
-//pub use const_hashmap_macros::{ConstEq, ConstHash};
+/// Siempre exportamos el macro `const_hashmap!` y `const_hashmap_const!`
+pub use const_hashmap_macros::const_hashmap;
+
+/// Cuando el usuario activa `features = ["derive"]`, también
+/// re-exportamos los derives `#[derive(ConstHash, ConstEq)]`.
+#[cfg(feature = "derive")]
+pub use const_hashmap_macros::{ConstEq, ConstHash};
