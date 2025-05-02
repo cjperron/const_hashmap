@@ -29,29 +29,8 @@
 //! #![feature(const_trait_impl)]  // nightly only
 //! use const_hashmap::{ConstMap, ConstHash, ConstEq, build_map, Bucket};
 //!
-//! // 1. Implement ConstHash + ConstEq for your key type.
-//! impl const ConstHash for &'static str {
-//!     fn const_hash(&self) -> u64 {
-//!         // simple FNV-1a:
-//!            const FNV_OFFSET: u64 = 0xcbf29ce484222325;
-//!            const FNV_PRIME:  u64 = 0x00000100000001B3;
+//! // 1. Implement ConstHash + ConstEq for your key type. &str is implemented from the get go
 //!
-//!         let mut h = FNV_OFFSET;
-//!         let bytes = self.as_bytes();
-//!         let mut i = 0;
-//!         while i < bytes.len() {
-//!             h ^= bytes[i] as u64;
-//!             h = h.wrapping_mul(FNV_PRIME);
-//!             i += 1;
-//!         }
-//!         h
-//!     }
-//! }
-//! impl const ConstEq for &'static str {
-//!     fn const_eq(&self, other: &Self) -> bool {
-//!         *self == *other
-//!     }
-//! }
 //!
 //! // 2. Build a small const map from a slice of (key, value) pairs.
 //! //    `N` is a power of two ≥ 2×pairs.len().
