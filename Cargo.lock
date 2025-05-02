@@ -5,9 +5,6 @@ version = 4
 [[package]]
 name = "const_hashmap"
 version = "0.1.0"
-dependencies = [
- "const_hashmap_macros",
-]
 
 [[package]]
 name = "const_hashmap_macros"

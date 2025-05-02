@@ -16,7 +16,9 @@ macro_rules! impl_eq_ints {
         }
     )*};
 }
-impl_eq_ints!(u8, u16, u32, u64, u128, usize, i8, i16, i32, i64, i128, isize, bool);
+impl_eq_ints!(
+    u8, u16, u32, u64, u128, usize, i8, i16, i32, i64, i128, isize, bool
+);
 
 impl const ConstEq for char {
     fn const_eq(&self, other: &Self) -> bool {
@@ -60,7 +62,9 @@ macro_rules! impl_hash_int {
     )*};
 }
 
-impl_hash_int!(u8, u16, u32, u64, u128, usize, i8, i16, i32, i64, i128, isize, bool);
+impl_hash_int!(
+    u8, u16, u32, u64, u128, usize, i8, i16, i32, i64, i128, isize, bool
+);
 
 impl const ConstHash for char {
     #[inline(always)]
@@ -251,7 +255,7 @@ where
     }
 }
 
-// src/builder.rs  (o dentro de lib.rs si prefieres)
+/// El caller debe de asegurarse de que el tamaño del array es potencia de 2 y que pairs esta armado correctamente.
 pub const fn build_map<K, V, const N: usize>(pairs: &[(K, V)]) -> ConstMap<K, V, N>
 where
     K: ~const ConstHash + ~const ConstEq + Copy,
