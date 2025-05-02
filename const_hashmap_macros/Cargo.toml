@@ -18,4 +18,4 @@ syn = { version = "2.0.101", features = ["full", "extra-traits"] }
 
 
 [dev-dependencies]
-const_hashmap = { path = "../../const_hashmap" }
+const_hashmap = { version = "0.1.0", path = "../../const_hashmap" }

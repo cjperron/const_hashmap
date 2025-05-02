@@ -15,7 +15,7 @@ members = ["const_hashmap_macros"]
 resolver = "3"
 
 [dependencies]
-const_hashmap_macros = { path = "./const_hashmap_macros" }
+const_hashmap_macros = { version = "0.1.0", path = "./const_hashmap_macros" }
 
 [features]
 derive = ["const_hashmap_macros/derive"]
