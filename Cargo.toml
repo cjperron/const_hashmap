@@ -1,6 +1,6 @@
 [package]
 name = "const_hashmap"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Alan Volker <volkeralan12@gmail.com>"]
 license = "MIT OR Apache-2.0"
