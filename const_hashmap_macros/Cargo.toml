@@ -1,0 +1,21 @@
+[package]
+name = "const_hashmap_macros"
+version = "0.1.0"
+edition = "2024"
+description = "A macro to create a map with constant keys and values"
+
+[lib]
+proc-macro = true
+
+[features]
+default = ["derive"]
+derive = []
+
+[dependencies]
+proc-macro2 = "1.0.95"
+quote = "1.0.40"
+syn = { version = "2.0.101", features = ["full", "extra-traits"] }
+
+
+[dev-dependencies]
+const_hashmap = { path = "../../const_hashmap" }
