@@ -15,9 +15,9 @@ Compile-time hash map for any key type implementing `ConstHash + ConstEq`.
 
 ```toml
 [dependencies]
-const_hashmap = "0.2"
+const_hashmap = "0.1.1"
 # To enable derive macros:
-const_hashmap = { version = "0.2", features = ["derive"] }
+const_hashmap = { version = "0.1.1", features = ["derive"] }
 ```
 
 Nightly is required:
