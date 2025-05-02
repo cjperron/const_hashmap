@@ -5,7 +5,7 @@ edition = "2024"
 authors = ["Alan Volker <volkeralan12@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "Compile-time hash map for any const-hashable key"
-# repository = "https://github.com/cjperron/const_hashmap"
+repository = "https://github.com/cjperron/const_hashmap"
 keywords = ["const", "map", "hash", "compile-time", "hashmap"]
 rust-version = "1.86.0"
 
