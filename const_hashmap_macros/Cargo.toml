@@ -6,7 +6,6 @@ authors = ["Alan Volker <volkeralan12@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "Procedural macros for const_hashmap (const_hashmap! and derives)"
 keywords = ["const", "hashmap", "proc-macro", "derive"]
-categories = ["development-tools::procedural-macros"]
 repository = "https://github.com/cjperron/const_hashmap"
 
 
